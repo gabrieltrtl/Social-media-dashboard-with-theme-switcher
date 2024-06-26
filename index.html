@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./src/style/styles.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | [Challenge Name Here]</title>
+</head>
+<body>
+
+  <div class="header-background"></div>
+  <header class="header">
+    <div class="header__title-wrapper">
+      <h1>Social Media Dashboard</h1>
+      <p>Total Followers: 23,004</p>
+    </div>
+    <div class="header__theme">
+      <p class="theme__text">Dark Mode</p>
+      <div class="">
+        <input id="theme" type="checkbox">
+        <label class="theme__label" for="theme"></label>
+      </div>
+    </div>
+  </header>
+
+  <main class="hero">
+    <section class="hero__social">
+      <div class="social__facebook social-media">
+        <div class="social__icon-wrapper">
+          <img src="./images/icon-facebook.svg" alt="">
+          <p>@nathanf</p>
+        </div>
+        <h2 class="social__followers-number">1987</h2>
+        <p class="social__followers">Followers</p>
+        <span class="social__today text-green">12 Today</span>
+      </div>
+      <div class="social__twitter social-media">
+        <div class="social__icon-wrapper">
+          <img src="./images/icon-twitter.svg" alt="">
+          <p>@nathanf</p>
+        </div>
+        <h2 class="social__followers-number">1044</h2>
+        <p class="social__followers">Followers</p>
+        <span class="social__today text-green">99 Today</span>
+      </div>
+      <div class="social__instagram social-media">
+        <div class="social__icon-wrapper">
+          <img src="./images/icon-instagram.svg" alt="">
+          <p>@realnathanf</p>
+        </div>
+        <h2 class="social__followers-number">11k</h2>
+        <p class="social__followers">Followers</p>
+        <span class="social__today text-green">1099 Today</span>
+      </div>
+      <div class="social__youtube social-media">
+        <div class="social__icon-wrapper">
+          <img src="./images/icon-youtube.svg" alt="">
+          <p>Nathan F.</p>
+        </div>
+        <h2 class="social__followers-number">8239</h2>
+        <p class="social__followers">Subscribers</p>
+        <span class="social__today text-red">144 Today</span>
+      </div>
+    </section>
+    <section class="hero__overview">
+      <h2 class="overview__title">Overview - Today</h2>
+      <div class="overview__info-wrapper info__facebook">
+        <p class="overview__metric-title">Page Views</p>
+        <img class="overview__icon" src="./images/icon-facebook.svg" alt="">
+        <p class="overview__metric-number">87</p>
+        <span class="overview__percent text-green">3%</span>
+      </div>
+      <div class="overview__info-wrapper info__facebook">
+        <p class="overview__metric-title">Likes</p>
+        <img class="overview__icon" src="./images/icon-facebook.svg" alt="">
+        <p class="overview__metric-number">52</p>
+        <span class="overview__percent text-red">2%</span>
+      </div>
+      <div class="overview__info-wrapper info__instagram">
+        <p class="overview__metric-title">Likes</p>
+        <img class="overview__icon" src="./images/icon-instagram.svg" alt="">
+        <p class="overview__metric-number">5462</p>
+        <span class="overview__percent text-green">2257%</span>
+      </div>
+      <div class="overview__info-wrapper info__instagram">
+        <p class="overview__metric-title">Profile Views</p>
+        <img class="overview__icon" src="./images/icon-instagram.svg" alt="">
+        <p class="overview__metric-number">52k</p>
+        <span class="overview__percent text-green">1375%</span>
+      </div>
+      <div class="overview__info-wrapper info__twitter">
+        <p class="overview__metric-title">Retweets</p>
+        <img class="overview__icon" src="./images/icon-twitter.svg" alt="">
+        <p class="overview__metric-number">117</p>
+        <span class="overview__percent text-green">303%</span>
+      </div>
+      <div class="overview__info-wrapper info__twitter">
+        <p class="overview__metric-title">Likes</p>
+        <img class="overview__icon" src="./images/icon-twitter.svg" alt="">
+        <p class="overview__metric-number">507</p>
+        <span class="overview__percent text-green">553%</span>
+      </div>
+      <div class="overview__info-wrapper info__youtube">
+        <p class="overview__metric-title">Likes</p>
+        <img class="overview__icon" src="./images/icon-youtube.svg" alt="">
+        <p class="overview__metric-number">107</p>
+        <span class="overview__percent text-red">19%</span>
+      </div>
+      <div class="overview__info-wrapper info__youtube">
+        <p class="overview__metric-title">Total Views</p>
+        <img class="overview__icon" src="./images/icon-youtube.svg" alt="">
+        <p class="overview__metric-number">1407</p>
+        <span class="overview__percent text-red">12%</span>
+      </div>
+    </section>
+  </main>
+  
+  <script src="./src/scripts/main.js"></script>
+</body>
+</html>

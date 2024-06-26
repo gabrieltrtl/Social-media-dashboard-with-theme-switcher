@@ -1,0 +1,267 @@
+@import './utils/utilities';
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+// CSS RESET
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  border: none;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Inter", sans-serif;
+}
+
+.header-background {
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  background-color: $neutral-color-2;
+  width: 100%;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  height: 235px;
+  @include device(tablet) {
+    height: 245px;
+  }
+}
+
+.header {
+  max-width: 326px;
+  margin: 36px auto 40px auto;
+  display: flex;
+  flex-direction: column;
+  h1 {
+    font-size: 24px;
+    color: $color-1;
+  }
+  p {
+    margin-bottom: 24px;
+    color: $color-2;
+    font-weight: 700;
+    font-size: map-get($fonts, "$small2");
+  }
+}
+
+.header__title-wrapper {
+  border-bottom: 1px solid $color-3;
+  margin-bottom: 16px;
+}
+
+.header__theme {
+  display: flex;
+  justify-content: space-between;
+  .theme__text{
+    font-size: map-get($fonts, "$small2");
+    color: $color-2;
+    font-weight: 700;
+  }
+  .theme__label {
+    display: inline-block;
+    height: 24px;
+    width: 48px;
+    background-color: $color-4;
+    border-radius: 12px;
+    cursor: pointer;
+    position: relative;
+    &::before {
+      position: absolute;
+      content: "";
+      background-color: $neutral-color-3;
+      height: 18px;
+      width: 18px;
+      border-radius: 50%;
+      margin: 3px;
+      transition: 0.3s;
+    }
+  }
+  input:checked + .theme__label::before {
+    transform: translateX(24px);
+  }
+  input:checked + .theme__label {
+    background: linear-gradient(to right, #388FE7, #40DB82)
+  }
+  input {
+    display: none;
+  }
+}
+
+.hero {
+  max-width: 326px;
+  margin: 0 auto;
+  @include device(tablet) {
+    max-width: 652px;
+  }
+  @include device(desktop) {
+    max-width: 1110px;
+  }
+}
+
+.hero__social {
+  @include device(tablet) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-bottom: 46px;
+  }
+  @include device(desktop) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.social-media {
+  display: flex;
+  flex-direction: column;
+  background-color: $neutral-color-3;
+  align-items: center;
+  padding: 32px 0 24px 0;
+}
+
+.social-media:not(:last-child) {
+  margin-bottom: 24px;
+  @include device(tablet) {
+    margin-bottom: initial;
+  }
+}
+
+.social__icon-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  p {
+    color: $color-2;
+    font-size: map-get($fonts, "$small1");
+    font-weight: 700;
+  }
+}
+
+.social__facebook,
+.social__twitter {
+  border-top: 5px solid #178FF5;
+  border-radius: 5px;
+}
+
+.social__instagram {
+  position: relative;
+  &::before {
+    content: "";
+    position: relative;
+    top: -32px;
+    width: 100%;
+    height: 5px;
+    background-image: linear-gradient(to left, #DF4896, #EE877E 51%, #FDC366); /* Gradient color */
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+}
+
+.social__youtube {
+  border-top: 5px solid #C4032B;
+  border-radius: 5px;
+  margin-bottom: 46px;
+  @include device(tablet) {
+    margin-bottom: initial;
+  }
+}
+
+.social__icon-wrapper {
+  margin-bottom: 28px;
+}
+
+.social__followers-number {
+  font-size: map-get($fonts, "$large2");
+  line-height: 0.85;
+  letter-spacing: -2px;
+  margin-bottom: 9px;
+}
+
+.social__followers {
+  font-size: map-get($fonts, "$small1");
+  letter-spacing: 5px;
+  color: $color-2;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+
+.hero__overview {
+  @include device(tablet) {  
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-bottom: 75px;
+  }
+  @include device(desktop) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.overview__title {
+  grid-column: 1 / -1;
+}
+
+.overview__info-wrapper {
+  display: grid;
+  gap: 21px 0;
+  grid-template-columns: 1fr 1fr;
+  padding: 26px 31px 19px 24px;
+  background-color: $neutral-color-3;
+  border-radius: 5px;
+}
+
+.overview__info-wrapper:not(:last-child) {
+  margin-bottom: 16px;
+  @include device(tablet) {
+    margin-bottom: initial;
+  }
+}
+
+.overview__info-wrapper:last-child {
+  margin-bottom: 45px;
+  @include device(tablet) {
+    margin-bottom: initial;
+  }
+}
+
+.overview__metric-title {
+  font-size: map-get($fonts, "$small2");
+  color: $color-2;
+  font-weight: 700;
+}
+
+.overview__metric-number {
+  font-size: map-get($fonts, "$medium1");
+  color: $color-1;
+  font-weight: 700;
+
+}
+
+.overview__icon,
+.overview__percent {
+  justify-self: end;
+}
+
+

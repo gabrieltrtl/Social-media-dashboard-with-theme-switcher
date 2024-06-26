@@ -1,0 +1,78 @@
+//Typography
+$fonts: (
+  "$small1": 12px,
+  "$small2": 14px,
+  "$medium1": 32px,
+  "$large1": 40px,
+  "$large2": 56px
+  );
+  
+  // Media Query
+  @mixin device($device) {
+  @if $device == tablet {
+    @media (min-width: 43.75rem) {
+      @content;
+    }
+  }  
+  @else if $device == desktop {
+    @media (min-width: 75rem) {
+      @content;
+    }
+  }
+}
+
+//Theme
+
+@mixin theme($theme) {
+  @if $theme == light {
+    $color-1: #1D1F29;
+    $color-2: #63687D;
+    $color-3: #848BAB;
+    $color-4: #AEB3CB;
+    $neutral-color-1: #FFFFFF;
+    $neutral-color-2: #F7F9FF;
+    $neutral-color-3: #F1F3FA;
+  } @else if $theme == dark {
+    $color-1: #FFFFFF;
+    $color-2: #8C98C6;
+    $color-3: #333A55;
+    $neutral-color-1: #1D1F29;
+    $neutral-color-2: #20222F;
+    $neutral-color-3: #252B42;
+  }
+}
+
+
+
+// utility classes
+.text-green {
+  font-size: map-get($fonts, "$small1");
+  color: #1EB589;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  &::before {
+    content: "";
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-bottom: 4px solid #1EB589;
+  }
+}
+
+.text-red {
+  font-size: map-get($fonts, "$small1");
+  color: #C4032B;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  &::before {
+    content: "";
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-bottom: 4px solid #C4032B;
+    transform: rotate(180deg);
+  }
+}
+

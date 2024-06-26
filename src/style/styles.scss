@@ -60,6 +60,7 @@ body {
     max-width: 1110px;
     flex-direction: row;
     justify-content: space-between;
+    margin: 36px auto 46px auto;
     align-items: center;
   }
   h1 {
@@ -71,6 +72,9 @@ body {
     color: var(--color-2);
     font-weight: 700;
     font-size: map-get($fonts, "$small2");
+    @include device(desktop) {
+      margin-bottom: initial;
+    }
   }
   
 }
@@ -80,6 +84,7 @@ body {
   margin-bottom: 16px;
   @include device(desktop) {
     border-bottom: none;
+    margin-bottom: initial;
   }
 }
 
@@ -88,6 +93,7 @@ body {
   justify-content: space-between;
   @include device(desktop) {
     gap: 13px;
+    align-items: center;
   }
   .theme__text{
     font-size: map-get($fonts, "$small2");
@@ -95,7 +101,7 @@ body {
     font-weight: 700;
   }
   .theme__label {
-    display: inline-block;
+    display: block;
     height: 24px;
     width: 48px;
     background-color: var(--color-4);
@@ -239,6 +245,7 @@ body {
   color: var(--color-1);
   @include device(tablet) {
     grid-column: 1 / -1;
+    margin-bottom: initial;
   }
 }
 
